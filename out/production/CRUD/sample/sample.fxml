@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TableView fx:id="tableView" prefHeight="338.0" prefWidth="1000" GridPane.rowIndex="5">
+        <columns>
+            <TableColumn fx:id="checkBox" prefWidth="75.0" text="select" />
+          <TableColumn fx:id="id" prefWidth="82.0" text="id" />
+          <TableColumn fx:id="username" prefWidth="254.0" text="Username" />
+            <TableColumn fx:id="password" prefWidth="242.0" text="password" />
+            <TableColumn fx:id="mejl" prefWidth="240.0" text="mejl" />
+        </columns>
+      </TableView>
+      <Button id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonAction" text="Delete" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="300.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+      </Button>
+      <Button id="connectButton" mnemonicParsing="false" onAction="#connectButtonAction" text="Connect" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+      </Button>
+      <Button id="readButton" mnemonicParsing="false" onAction="#readButtonAction" text="Read" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="15.0" left="150.0" right="15.0" top="15.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonAction" text="Update" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="450.0" />
+         </GridPane.margin>
+      </Button>
+      <TextField fx:id="usernameTextField" alignment="CENTER" />
+      <TextField fx:id="passwordTextField" alignment="CENTER" GridPane.rowIndex="1" />
+      <TextField fx:id="mejlTextField" alignment="CENTER" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#createButtonAction" text="Create" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="600.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>
